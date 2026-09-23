@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>People Management</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+    <body>
+        <header>
+        <h1>People Management</h1>
+        <p>Manage your people with ease.</p>
+        </header>
+    </body>
+    <main>
+        <!--Add Person Section -->
+        <section>
+            <h2>Add Person</h2>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter name">
+                    </div>
+                    <div>
+                    <label for="email">Email:</label>
+                    <input type="email" 
+                            id="email" 
+                            name="email" required 
+                            placeholder="Enter email">
+                    </div>
+                    <div>
+                        <label for="age">Age:</label>
+                        <input type="number" 
+                                id="age" 
+                                name="age" required 
+                                placeholder="Enter age">
+                    </div>                    
+                    <button type="submit">Add Person</button>
+                </div>
+            </form>
+        </section>
+
+        <!--People List Section -->
+        <section id="add-person">
+            <h2>People</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- People will be dynamically added here -->
+                     <tr>
+                        <td>John Doe</td>
+                        <td>john@gmail.com</td>
+                        <td>30</td>
+                        <td>
+                            <button type = "button">Edit</button>
+                            <button type = "button">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sarah</td>
+                        <td>sarah@gmail.com</td>
+                        <td>27</td>
+
+                        <td>
+                            <button type="button">
+                                Edit
+                            </button>
+
+                            <button type="button">
+                                Delete
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>People Management App</p>
+    </footer>
+</html> 

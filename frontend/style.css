@@ -1,0 +1,129 @@
+/* =========================
+   1. Global Reset
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: lightblue;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+
+/* =========================
+   2. Header
+   ========================= */
+
+header {
+    background-color: #1f2937;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 8px 0 0;
+}
+
+
+/* =========================
+   3. Main Content
+   ========================= */
+
+main {
+    width: min(1100px, 92%);
+    margin: 30px auto;
+}
+
+
+/* =========================
+   4. Sections
+   ========================= */
+
+section {
+    background-color: white;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+
+
+/* =========================
+   5. Form
+   ========================= */
+
+form {
+    display: grid;
+    gap: 16px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* =========================
+   6. Buttons
+   ========================= */
+
+button {
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   7. Table
+   ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f3f5;
+}
+
+
+/* =========================
+   8. Footer
+   ========================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
