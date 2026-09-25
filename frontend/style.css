@@ -1,44 +1,44 @@
-/* =========================
-   1. Global Reset
-   ========================= */
+/* ==============================
+   GLOBAL RESET
+   ============================== */
 
 * {
     box-sizing: border-box;
 }
-body {
-    background-color: lightblue;
-}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f6f8;
-    color: #222;
+    color: #1f2937;
 }
 
 
-/* =========================
-   2. Header
-   ========================= */
+/* ==============================
+   HEADER
+   ============================== */
 
 header {
     background-color: #1f2937;
     color: white;
-    padding: 24px;
+    padding: 30px 20px;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
+    font-size: 32px;
 }
 
 header p {
     margin: 8px 0 0;
+    color: #d1d5db;
 }
 
 
-/* =========================
-   3. Main Content
-   ========================= */
+/* ==============================
+   MAIN
+   ============================== */
 
 main {
     width: min(1100px, 92%);
@@ -46,21 +46,26 @@ main {
 }
 
 
-/* =========================
-   4. Sections
-   ========================= */
+/* ==============================
+   SECTIONS
+   ============================== */
 
 section {
     background-color: white;
     padding: 24px;
     margin-bottom: 24px;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-top: 0;
 }
 
 
-/* =========================
-   5. Form
-   ========================= */
+/* ==============================
+   FORM
+   ============================== */
 
 form {
     display: grid;
@@ -78,29 +83,36 @@ label {
 }
 
 input {
-    padding: 10px;
+    width: 100%;
+    padding: 11px 12px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
 }
 
 
-/* =========================
-   6. Buttons
-   ========================= */
+/* ==============================
+   BUTTONS
+   ============================== */
 
 button {
     padding: 10px 16px;
-    font-size: 16px;
+    font-size: 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
+    background-color: #2563eb;
+    color: white;
+}
+
+button:hover {
+    background-color: #1d4ed8;
 }
 
 
-/* =========================
-   7. Table
-   ========================= */
+/* ==============================
+   TABLE
+   ============================== */
 
 table {
     width: 100%;
@@ -109,21 +121,135 @@ table {
 
 th,
 td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
     text-align: left;
 }
 
 th {
-    background-color: #f1f3f5;
+    background-color: #f8fafc;
+    font-weight: bold;
 }
 
 
-/* =========================
-   8. Footer
-   ========================= */
+/* ==============================
+   FOOTER
+   ============================== */
 
 footer {
     text-align: center;
     padding: 20px;
+    color: #6b7280;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+}
+
+/* ==============================
+   ACCESSIBLE FOCUS STATES
+   ============================== */
+
+input:focus-visible,
+button:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
+/* ==============================
+   :is() - Group selectors
+   ============================== */
+
+:is(header h1, section h2) {
+    letter-spacing: 0.3px;
+}
+
+/* ==============================
+   :where() - Zero specificity
+   ============================== */
+
+:where(section h2, footer p) {
+    color: #475569;
+}
+
+/* ==============================
+   :not() - Exclude elements
+   ============================== */
+
+td button:not(:last-child) {
+    margin-right: 6px;
+}
+
+/* ==============================
+   :has() - Style a parent
+   ============================== */
+
+form div:has(input:focus-visible) {
+    background-color: #eff6ff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* ==============================
+   FORM VALIDATION
+   ============================== */
+
+/* Valid field after user interaction */
+.form-field input:user-valid {
+    border-color: #16a34a;
+}
+
+/* Invalid field after user interaction */
+.form-field input:user-invalid {
+    border-color: #dc2626;
+}
+
+/* Highlight the wrapper when the input is invalid */
+.form-field:has(input:user-invalid) {
+    background-color: #fef2f2;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+/* Visible focus state */
+.form-field input:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
+
+
+/* ==============================
+   TOUCH TARGETS
+   ============================== */
+
+button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px 16px;
 }

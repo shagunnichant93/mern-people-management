@@ -19,28 +19,58 @@
         <!--Add Person Section -->
         <section>
             <h2>Add Person</h2>
-            <form>
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter name">
-                    </div>
-                    <div>
-                    <label for="email">Email:</label>
-                    <input type="email" 
-                            id="email" 
-                            name="email" required 
-                            placeholder="Enter email">
-                    </div>
-                    <div>
-                        <label for="age">Age:</label>
-                        <input type="number" 
-                                id="age" 
-                                name="age" required 
-                                placeholder="Enter age">
-                    </div>                    
-                    <button type="submit">Add Person</button>
-                </div>
-            </form>
+            
+<form id="personForm">
+
+    <!-- Name -->
+    <div class="form-field">
+        <label for="name">Name</label>
+
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter full name"
+            autocomplete="name"
+            required
+            minlength="2"
+        >
+    </div>
+
+    <!-- Email -->
+    <div class="form-field">
+        <label for="email">Email</label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter email address"
+            autocomplete="email"
+            required
+        >
+    </div>
+
+    <!-- Age -->
+    <div class="form-field">
+        <label for="age">Age</label>
+
+        <input
+            type="number"
+            id="age"
+            name="age"
+            placeholder="Enter age"
+            min="18"
+            max="100"
+            required
+        >
+    </div>
+
+    <button type="submit">
+        Add Person
+    </button>
+
+</form>
         </section>
 
         <!--People List Section -->
